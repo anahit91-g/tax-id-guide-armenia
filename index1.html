@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide to Obtain Tax Identification Number in Armenia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        .question {
+            margin: 20px 0;
+            font-weight: bold;
+            text-align: center;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+        }
+        .answer {
+            margin-left: 20px;
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+        .step {
+            margin-left: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Guide to Obtain Tax Identification Number in Armenia</h1>
+
+    <div id="q1" class="question">
+        <p>Are you a citizen of the Republic of Armenia?</p>
+        <span class="answer" onclick="showStep('q2')">Yes</span>
+        <span class="answer" onclick="showStep('noncitizen')">No</span>
+    </div>
+
+    <div id="q2" class="question hidden">
+        <p>Do you have an Identification Card with an Electronic Chip (eID) issued by February 15, 2023, and its PIN/PUK codes?</p>
+        <span class="answer" onclick="showStep('eID-with-pin')">Yes</span>
+        <span class="answer" onclick="showStep('no-eID')">No</span>
+    </div>
+
+    <div id="eID-with-pin" class="step hidden">
+        <p><b>Steps:</b></p>
+        <ol>
+            <li>Activate your electronic signature: <a href="https://www.ekeng.am/hy/e_sign" target="_blank">EKENG</a> (Annual payment: 3,000 AMD).</li>
+            <li>Log in to the <a href="https://self-portal.taxservice.am/en/sign-in/" target="_blank">Unified System of Electronic Services</a> and obtain your Tax ID automatically.</li>
+        </ol>
+    </div>
+
+    <div id="no-eID" class="question hidden">
+        <p>Do you have one of the following?</p>
+        <ul>
+            <li>An Identification Card with an Electronic Chip (eID), but forgot PIN/PUK codes.</li>
+            <li>An Identification Card without an Electronic Chip.</li>
+        </ul>
+        <span class="answer" onclick="showStep('mobile-id')">Yes</span>
+        <span class="answer" onclick="showStep('new-id')">No</span>
+    </div>
+
+    <div id="mobile-id" class="step hidden">
+        <p><b>Steps:</b></p>
+        <ol>
+            <li>Obtain a Mobile ID from any mobile service provider (Team Telecom, Ucom, Viva MTS) using your Passport/ID and Social Security Number.</li>
+            <li>Activate your Mobile ID electronic signature: <a href="https://www.ekeng.am/hy/payments" target="_blank">EKENG</a> (Annual payment: 3,000 AMD).</li>
+            <li>Log in to the <a href="https://self-portal.taxservice.am/en/sign-in/" target="_blank">Unified System of Electronic Services</a> and obtain your Tax ID automatically.</li>
+        </ol>
+    </div>
+
+    <div id="new-id" class="step hidden">
+        <p><b>Steps:</b></p>
+        <ol>
+            <li>Book an appointment for an ID card: <a href="https://migration.e-gov.am/en/service/id_cards/info" target="_blank">Migration and Citizenship Services</a>.</li>
+            <li>Obtain a Mobile ID from any mobile service provider (Team Telecom, Ucom, Viva MTS) using your Passport/ID and Social Security Number.</li>
+            <li>Activate your Mobile ID electronic signature: <a href="https://www.ekeng.am/hy/payments" target="_blank">EKENG</a> (Annual payment: 3,000 AMD).</li>
+            <li>Log in to the <a href="https://nid.e-gov.am/en/auth/mid" target="_blank">Unified System of Electronic Services</a> and obtain your Tax ID automatically.</li>
+        </ol>
+    </div>
+
+    <div id="noncitizen" class="step hidden">
+        <p><i>Guide for non-citizens is currently in progress.</i></p>
+    </div>
+
+    <script>
+        function showStep(stepId) {
+            // Hide all steps
+            const steps = document.querySelectorAll('.question, .step');
+            steps.forEach(step => step.classList.add('hidden'));
+
+            // Show the selected step
+            const selectedStep = document.getElementById(stepId);
+            selectedStep.classList.remove('hidden');
+        }
+    </script>
+
+</body>
+</html>
+
